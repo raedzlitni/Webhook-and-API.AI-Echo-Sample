@@ -13,6 +13,10 @@ restService.use(
 
 restService.use(bodyParser.json());
 
+restService.get("/", (req,res) => {
+  res.send("Server is alive!!");
+});
+
 restService.post("/echo", function(req, res) {
   var speech =
     req.body.result &&
